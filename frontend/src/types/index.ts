@@ -63,4 +63,22 @@ export interface Question {
   topic_id?: string;
   sub_topic_id?: string;
   test_id: string;
+  image?: string; // Base64 or temp URL for uploaded image
+}
+
+export interface QuestionFormData {
+  id?: string;
+  type: string;
+  question: string;
+  option1: string;
+  option2: string;
+  option3: string;
+  option4: string;
+  correct_option: string;
+  explanation: string;
+  difficulty: string;
+  topic_id: string;
+  sub_topic_id: string;
+  image?: string;
+  imageFile?: File | null;
 }
